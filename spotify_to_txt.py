@@ -4,8 +4,8 @@ from spotipy.oauth2 import SpotifyOAuth
 import youtube_dl
 
 # Replace with your Spotify API credentials
-CLIENT_ID = 'bc3d7434dda447899fce87f89abd32e6'
-CLIENT_SECRET = 'd1b4a84dbd5440e9a5b93c681b425cc4'
+CLIENT_ID = 'YOUR SPOTIFY CLIENT_ID GOES HERE'
+CLIENT_SECRET = 'YOUR SPOTIFY CLIENT_SECRET GOES HERE'
 REDIRECT_URI = 'http://localhost:8888/callback'
 
 def get_spotify_tracks(sp, playlist_link):
@@ -66,9 +66,9 @@ def main():
     write_tracks_to_file("youtube_music_tracks.txt", youtube_tracks)
     write_unique_tracks_to_file(f"{playlist_name}_unique.txt", unique_tracks)
 
-    print(f"Tracks from Spotify playlist written to {playlist_name}_spotify.txt")
+    print(f"Tracks from Spotify playlist written to spotify_music_tracks.txt")
     print(f"Tracks from YouTube Music playlist written to youtube_music_tracks.txt")
-    print(f"Unique tracks written to {playlist_name}_unique.txt")
+    print(f"Unique tracks written to unique.txt")
 
 if __name__ == "__main__":
     main()
